@@ -70,6 +70,9 @@ body {
     font-weight: 600;
     animation: moveInRight 1s ease-out; }
 
+.grid {
+  color: #fff; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -133,3 +136,29 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.grid .row {
+  max-width: 114rem;
+  background-color: #777;
+  margin: auto; }
+  .grid .row::after {
+    content: '';
+    clear: both;
+    display: table; }
+  .grid .row:not(:last-child) {
+    margin-bottom: 1rem; }
+  .grid .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .grid .row [class^="col-"]:not(:last-child) {
+      margin-right: 1.5rem; }
+  .grid .row .col-1-of-2 {
+    width: calc((100% - 1.5rem) / 2); }
+  .grid .row .col-1-of-3 {
+    width: calc((100% - (2 * 1.5rem)) / 3); }
+  .grid .row .col-2-of-3 {
+    width: calc((2 * (100% - (2 * 1.5rem)) / 3) + 1.5rem); }
+  .grid .row .col-1-of-4 {
+    width: calc((100% - (3 * 1.5rem)) / 4); }
+  .grid .row .col-3-of-4 {
+    width: calc((3 * (100% - (3 * 1.5rem)) / 4) + 2 * 1.5rem); }
