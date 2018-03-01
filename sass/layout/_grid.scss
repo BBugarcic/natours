@@ -3,7 +3,7 @@
     margin: auto;
     @include clearfix;
     &:not(:last-child){
-        margin-bottom: $grid-vertial-gap;
+        margin-bottom: $grid-horizontal-gap;
     }
     [class^="col-"] {
         float: left;
